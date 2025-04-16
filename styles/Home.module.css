@@ -32,6 +32,12 @@
   flex-direction: column;
   gap: 32px;
   grid-row-start: 2;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.text{
+  font-weight: bold;
 }
 
 .main ol {
@@ -82,8 +88,7 @@
 }
 
 a.primary {
-  background: var(--foreground);
-  color: var(--background);
+ 
   gap: 8px;
 }
 
