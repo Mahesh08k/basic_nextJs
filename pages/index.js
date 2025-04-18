@@ -35,7 +35,13 @@ export default function Home() {
         <main className={styles.main}>
           <h1 className={styles.title}>Hunting Coders</h1>
           <div className="imgWrapper">
-            <Image src= "/homeImg.avif" width={600} height={400} alt="coding Image"></Image>
+            {/* <Image src= "/homeImg.avif" width={600} height={400} alt="coding Image"></Image> */}
+            <img
+              src="/homeImg.avif"
+              alt="Hunting coders"
+              width={600} height={400}
+              className={styles.homeImg}
+            />
           </div>
           <h2 className={styles.description}>
             A blog for hunting coders by coder

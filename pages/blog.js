@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import styles from "@/styles/Blog.module.css";
 import Link from 'next/link';
+import * as fs from 'fs';
 
 const blog = (props) => {
   
-  const[blogs, setBlogs] = useState(props.blogs)
+  const[blogs, setBlogs] = useState(props.allBlogs)
 
   return (
     <>
@@ -32,12 +33,18 @@ const blog = (props) => {
 }
 
 
-export async function getServerSideProps (context) {
-  const data  = await fetch('http://localhost:3000/api/blogs')
-  const blogs = await data.json()
-   
+
+export async function getStaticProps (context) {
+
+  let myBlogs = await fs.promises.readdir('blogdata')   
+      let allBlogs = []
+      for(let i = 0; i < myBlogs.length; i++){
+        let data = await fs.promises.readFile(`blogdata/${myBlogs[i]}`,'utf-8')
+        allBlogs.push(JSON.parse(data))
+      }
+
    return {
-       props: {blogs}
+       props: {allBlogs}
    }
 }
 
