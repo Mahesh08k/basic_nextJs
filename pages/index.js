@@ -33,7 +33,7 @@ export default function Home() {
      
       <div>
         <main className={styles.main}>
-          <h1 className={styles.title}>Hunting Coders</h1>
+          <h1 className={styles.title}> &lt;Dev Scout /&gt; </h1>
           <div className="imgWrapper">
             {/* <Image src= "/homeImg.avif" width={600} height={400} alt="coding Image"></Image> */}
             <img
@@ -44,7 +44,7 @@ export default function Home() {
             />
           </div>
           <h2 className={styles.description}>
-            A blog for hunting coders by coder
+            A blog for Coders by a Coder
           </h2>
           
           <div className={styles.ctas}></div>

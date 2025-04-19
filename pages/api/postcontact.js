@@ -6,7 +6,7 @@ const handler = async (req, res) => {
        
         let data = await fs.promises.readdir('contactData')
         fs.promises.writeFile(`contactData/${data.length + 1}.json`, JSON.stringify(req.body))
-        res.status(200).json({message:'Yes this is post request'})
+        res.status(200).json({message:'Success'})
     }
     else{
         res.status(200).json({status:'success'})

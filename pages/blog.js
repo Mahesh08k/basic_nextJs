@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styles from "@/styles/Blog.module.css";
 import Link from 'next/link';
 import * as fs from 'fs';
+import InfiniteScroll from 'react-infinite-scroll-component'
 
 const blog = (props) => {
   
