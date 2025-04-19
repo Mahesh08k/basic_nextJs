@@ -21,7 +21,6 @@ const contact = () => {
     }).then((response) => {
       return response.text()
     }).then((data) => {
-      console.log(data)
       setDesc('')
       setEmail('')
       setName('')
